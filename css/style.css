@@ -9,17 +9,25 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .container {
     height: 100vh;
     /* background: linear-gradient(180deg, #92D8FF 0%, rgba(33, 76, 100, 0) 100%); */
-    background: linear-gradient(180deg, #6a96ae 0%, rgb(0 36 55) 100%);
+    /* background: linear-gradient(180deg, #6a96ae 0%, rgb(0 36 55) 100%);  */
     display: flex;
     flex-direction: column;
 }
 
+.container-video{
+    position: fixed;
+    z-index: -999;
+}
+
 header {
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,7 +56,11 @@ header {
 }
 
 .text-blue {
-    color: #5ca2ca !important;
+    color: #0760a2 !important;
+}
+
+.text-yellow{
+    color:#ffd939!important;
 }
 
 .text-white {
@@ -138,6 +150,17 @@ header {
     color: #ffffff;
 }
 
+.ticket-link{
+    text-decoration: none;
+    color: black;
+    border-radius: 4px;
+    background-color: #ffd939;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .logo,
 .icone {
     width: 30px;
@@ -187,7 +210,7 @@ header {
 
 
 #pesquisar_destino {
-    border: 1px solid white;
+    border: 1px solid #ffd939;
     border-radius: 10px;
     height: 50px;
     font-size: 20px;
@@ -219,5 +242,13 @@ header {
 @media (max-width: 829px) {
     .title {
         font-size: 25px;
+    }
+
+    .container-video{
+        display: none; 
+    }
+
+    .container{
+        background: linear-gradient(180deg, #54808f 0%, rgba(33, 76, 100, 0) 100%);
     }
 }
